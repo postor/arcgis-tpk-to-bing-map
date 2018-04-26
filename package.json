@@ -1,0 +1,24 @@
+{
+  "name": "arcgis-tpk-to-bing-map",
+  "version": "1.0.0",
+  "description": "当然除了bing地图，google地图、leaflet等也都能用 | besides bing map, tiles can also be used in google map, leaflet etc.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "http-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/postor/arcgis-tpk-to-bing-map.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/postor/arcgis-tpk-to-bing-map/issues"
+  },
+  "homepage": "https://github.com/postor/arcgis-tpk-to-bing-map#readme",
+  "dependencies": {
+    "http-server": "^0.11.1"
+  }
+}

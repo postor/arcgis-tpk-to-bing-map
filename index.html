@@ -1,0 +1,38 @@
+X, Y, Zoom TileLayer
+Bing
+ 
+This example shows how to display a tile layer that uses an X, Y and Zoom tile URL schema. The source of this tile layer is a weather radar overlay from the Iowa Environmental Mesonet of Iowa State University.
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <script type='text/javascript'
+            src='https://www.bing.com/api/maps/mapcontrol?callback=GetMap'
+            async defer></script>
+
+    <script type='text/javascript'>
+    var map;
+
+    function GetMap() {
+        map = new Microsoft.Maps.Map('#myMap', {
+            credentials: 'AodAYS1b9w_cIeDbXIfAGrSiJauYSFMnh0xZixoDcM_7z0hAHtlZD0mHjOUjB2bk',
+            center: new Microsoft.Maps.Location(40.75, -99.47),
+            zoom: 4
+        });
+
+        //Weather radar tiles from Iowa Environmental Mesonet of Iowa State University
+        var weatherTileLayer = new Microsoft.Maps.TileLayer({
+            mercator: new Microsoft.Maps.TileSource({
+                uriConstructor: '/tiles/{zoom}/{x}/{y}.png'
+            })
+        });
+        map.layers.insert(weatherTileLayer);
+    }
+    </script>
+</head>
+<body>
+    <div id="myMap" style="position:relative;width:600px;height:400px;"></div>
+</body>
+</html>
